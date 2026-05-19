@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DiplomaTest1.Core\DiplomaTest1.Core.csproj" />
+    <ProjectReference Include="..\DiplomaTest1.DAL\DiplomaTest1.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
