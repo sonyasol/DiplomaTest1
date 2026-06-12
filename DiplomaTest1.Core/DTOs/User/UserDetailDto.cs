@@ -14,10 +14,10 @@ namespace DiplomaTest1.Core.DTOs.User
         public string FirstName { get; set; } = string.Empty;
         public string MiddleName {  get; set; } = string.Empty;
         public DateOnly DateOfBirth {  get; set; }
-        public int Snils { get; set; }
+        public string Snils { get; set; }
         public string Phone { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
-        public string Role {  get; set; } = string.Empty;
+        public string Role {  get; set; } 
 
         public List<RecordSummaryDto> Records { get; set; } = new();
     }

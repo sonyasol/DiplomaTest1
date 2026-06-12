@@ -11,6 +11,6 @@ namespace DiplomaTest1.Core.Models
         public int Id { get; set; }
         public string InfectionName { get; set; } = string.Empty;
 
-        public ICollection<Vaccine> Vaccines { get; set; } = new List<Vaccine>;
+        public ICollection<Vaccine> Vaccines { get; set; } = new List<Vaccine>();
     }
 }

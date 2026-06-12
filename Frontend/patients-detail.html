@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пациенты - Реестр вакцинированных</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">💉</div>
+            <span>Реестр вакцинированных</span>
+        </div>
+        <nav class="nav-links">
+            <a href="patients.html" class="nav-link-patients">Назад к списку</a>
+            <a href="login.html" class="nav-link">Выйти</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="patient-profile">
+            <div class="profile-header">
+                <div class="avatar">👤</div>
+                <div class="profile-info">
+                    <h1 id="patientName" class="profile-name">Загрузка...</h1>
+                </div>
+                <button class="btn btn-primary" onclick="openAddVaccineModal()"> + Добавить прививку</button>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <label>Дата рождения</label>
+                    <div class="value" id="patientBirthDate">-</div>
+                </div>
+                <div class="info-card">
+                    <label>СНИЛС</label>
+                    <div class="value" id="patientSnils">-</div>
+                </div>
+                <div class="info-card">
+                    <label>Телефон</label>
+                    <div class="value" id="patientPhone">-</div>
+                </div>
+                <div class="info-card">
+                    <label>Email</label>
+                    <div class="value" id="patientEmail">-</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="vaccine-section">
+            <div class="section-header">
+                <h2>История вакцинации</h2>
+                <div class="stats-badge" id="vaccineCount">0 прививок</div>
+            </div>
+            
+            <div class="vaccines-list" id="vaccineList">
+
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="vaccineModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>➕ Добавить прививку</h2>
+                <button class="modal-close" onclick="closeVaccineModal()">✕</button>
+            </div>
+
+            <form id="vaccineForm">
+                <div class="form-group">
+                    <label>Вакцина</label>
+                    <select id="fieldVaccine" class="form-input" required>
+                        <option value="">- выберите вакцину -</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Дата прививки</label>
+                    <input type="date" id="vaccineDate" class="form-input" required>
+                </div>
+                <div class="form-group checkbox">
+                    <label>
+                    <input type="checkbox" id="hasReaction">
+                    Была побочная реакция?
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeVaccineModal()">Отмена</button>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+       
+    <script src="patients-detail.js"></script>
+</body>
+</html>
+

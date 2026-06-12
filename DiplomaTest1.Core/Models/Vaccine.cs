@@ -15,6 +15,6 @@ namespace DiplomaTest1.Core.Models
         public int InfectionId { get; set; }
 
         public Infection Infection { get; set; } = null!;
-        public ICollection<Record> Records { get; set; } = new List<Record>;
+        public ICollection<Record> Records { get; set; } = new List<Record>();
     }
 }

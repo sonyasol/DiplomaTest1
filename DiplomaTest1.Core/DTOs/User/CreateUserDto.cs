@@ -19,9 +19,15 @@ namespace DiplomaTest1.Core.DTOs.User
 
         public DateOnly DateOfBirth { get; set; }
 
+
+        // Проблемы с int:
+        // 1. СНИЛС начинается с нуля — int отбросит его: 001-234 станет 1234
+        // 2. [MinLength] не работает с int — только со строками
+        // 3. Дефисы и пробелы в формате "123-456-789 00" не влезут в int
+
         [Required(ErrorMessage = "СНИЛС обязателен")]
         [MinLength(11, ErrorMessage = "СНИЛС должен содержать 11 исмволов")] //проверить нужно сделать снилс строкой или инт
-        public int Snils { get; set; }
+        public string Snils { get; set; }
 
         public string Phone { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;

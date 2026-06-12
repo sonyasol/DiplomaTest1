@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Реестр вакцинированных</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">💉</div>
+            <span>Реестр вакцинированных</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-wrap">
+
+            <div class="login-header">
+                <h1 class="page-title">Вход в систему</h1>
+            </div>
+
+            <div class="form-error" if="loginForm" style="display: none;"></div>
+
+            <div class="login-form">
+                <div class="form-field">
+                    <label>СНИЛС</label>
+                    <input type="text" id="fieldSnils" placeholder="12345678900" maxlength="11"/>
+                </div>
+
+                <div class="form-field">
+                    <label>Пароль</label>
+                    <input type="password" id="fieldPassword"/>
+                </div>
+
+                <button class="btn btn-login" onclick="login()">Войти</button>
+            </div>
+
+        </div>
+    </main>
+    
+    <script src="login.js"></script>
+</body>
+</html>

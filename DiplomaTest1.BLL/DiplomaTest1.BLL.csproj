@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.27" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\DiplomaTest1.Core\DiplomaTest1.Core.csproj" />
     <ProjectReference Include="..\DiplomaTest1.DAL\DiplomaTest1.DAL.csproj" />
   </ItemGroup>
